@@ -1,0 +1,175 @@
+:root {
+  --c1: #0f4c81;
+  --c2: #30d5c8;
+  --c3: #ffd700;
+  --c4: #fafafa;
+
+  --g1: linear-gradient(
+    to right top,
+    #0f4c81,
+    #006598,
+    #007faa,
+    #0099b8,
+    #00b3c3,
+    #00c2c1,
+    #08d1b7,
+    #49dea7,
+    #72e285,
+    #9ee35f,
+    #cde036,
+    #ffd700
+  );
+  --g2: linear-gradient(
+    to right top,
+    #ffd700,
+    #cde036,
+    #9ee35f,
+    #72e285,
+    #49dea7,
+    #08d1b7,
+    #00c2c1,
+    #00b3c3,
+    #0099b8,
+    #007faa,
+    #006598,
+    #0f4c81
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+.active {
+  color: var(--c4) !important;
+  background: var(--g2);
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.67);
+}
+body {
+  position: relative;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+}
+
+.menu {
+  height: 100%;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+}
+/* .menu ul li {
+  margin-left: 15px;
+} */
+.menu ul li a {
+  color: var(--c1);
+  padding: 7px 15px;
+  border-radius: 25px;
+  position: relative;
+  /* overflow: hidden; */
+  transition: 1s;
+  z-index: 1;
+}
+.menu ul li a::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  border-radius: 25px;
+  background: var(--g2);
+
+  top: -50%;
+  left: -50%;
+  transition: 0.4s;
+}
+.menu ul li a:hover {
+  color: var(--c4);
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.67);
+}
+.menu ul li a:hover::before {
+  width: 100%;
+  height: 100%;
+  transform: translate(50%, 50%);
+}
+.n_btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.n_btn .btn {
+  color: var(--c1);
+  font-weight: 700;
+  padding: 8px 20px;
+  background: var(--c1);
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.67);
+  outline: 0;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: 0.7s;
+}
+.n_btn .btn:hover {
+  color: var(--c4);
+}
+
+.n_btn .btn::before {
+  content: "";
+  width: 100%;
+  height: 160px;
+  position: absolute;
+  top: 0px;
+  left: -60px;
+  background: var(--c2);
+  z-index: -1;
+  transition: 0.7s;
+  transform: rotate(45deg);
+}
+.n_btn .btn::after {
+  content: "";
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  right: -30px;
+  background: var(--c2);
+  z-index: -1;
+  transition: 0.7s;
+  transform: rotate(45deg);
+}
+.n_btn .btn:hover::after {
+  bottom: 0px;
+  right: -130px;
+}
+.n_btn .btn:hover::before {
+  top: 0px;
+  left: -160px;
+}
+/* navbar css ends */
+
+/* hero section css starts from here */
+#heroPart {
+  width: 100%;
+  height: 100vh;
+  background-image: var(--g1);
+}

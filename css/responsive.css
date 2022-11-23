@@ -1,0 +1,50 @@
+@media (max-width: 575.98px) {
+  body {
+    overflow-x: hidden;
+  }
+  .logo {
+    display: flex;
+    justify-content: space-between;
+  }
+  #navMenu {
+    position: absolute;
+    top: 50px;
+    right: -300px;
+    transition: 0.7s;
+  }
+  .bar {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    z-index: 555555;
+  }
+  .bar i {
+    font-size: 3rem;
+    cursor: pointer;
+  }
+  .menu ul {
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+    text-align: right;
+  }
+  .menu ul::before {
+    content: "";
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: -150px;
+    right: -250px;
+    background: rgba(161, 119, 119, 0.423);
+    z-index: 1;
+  }
+  .menu ul li {
+    margin-bottom: 15px;
+  }
+  .n_btn {
+    display: none;
+  }
+}
