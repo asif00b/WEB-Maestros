@@ -171,6 +171,7 @@ nav {
 
 /* hero section css starts from here */
 #heroPart {
+  overflow-x:hidden;
   width: 100%;
   height: 100vh;
   background-image: var(--g1);
