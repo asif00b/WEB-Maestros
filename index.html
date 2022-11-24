@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CIT C</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font -->
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -22,21 +30,28 @@
               </div>
             </div>
             <div class="col-lg-7">
-              <div class="menu">
-                <div class="bar d-lg-none">
-                  <i
-                    class="fa-solid fa-bars-staggered"
-                    onclick="showMenu()"
-                  ></i>
-                  <i class="fa-solid fa-xmark close" onclick="hideMenu()"></i>
+              <div class="bar d-lg-none">
+                <i
+                  id="bar"
+                  class="fa-solid fa-bars-staggered"
+                  onclick="showMenu()"
+                ></i>
+              </div>
+              <div>
+                <div id="menu" class="menu">
+                  <ul>
+                    <i
+                      id="close"
+                      class="fa-solid fa-xmark close d-lg-none"
+                      onclick="hideMenu()"
+                    ></i>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Screenshots</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
                 </div>
-                <ul id="navMenu">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Screenshots</a></li>
-                  <li><a href="#">Pricing</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
               </div>
             </div>
             <div class="col-lg-2">
